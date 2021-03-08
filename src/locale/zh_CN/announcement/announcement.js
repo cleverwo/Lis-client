@@ -1,0 +1,16 @@
+export default {
+  'announcement.announcementContent': '公告内容',
+  'announcement.announcementStatus': '公告状态',
+  'announcement.creationTime': '创建时间',
+  'announcement.selectVendor': '请选择售货机',
+  'announcement.vdCode': '设备唯一编号',
+  'announcement.vdName': '设备名称',
+  'announcement.add': '创建新公告',
+  'announcement.inputContent': '请输入公告内容',
+  'announcement.noMoreThan': '字数长度不能超过30',
+  'announcement.inputStatus': '请输入公告状态',
+  'announcement.conversiontrue': '确定停用此公告吗？',
+  'announcement.conversionfalse': '确定启用此公告吗？',
+  'announcement.enable': '启用',
+  'announcement.disable': '停用',
+};

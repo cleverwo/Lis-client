@@ -1,0 +1,16 @@
+export default {
+  'adConfig.create': '新建售货机广告位置',
+  'adConfig.update': '更新售货机广告位置',
+  'adConfig.location': '广告位置',
+  'adConfig.vdType': '售货机类型',
+  'adConfig.adType': '展示类型',
+  'adConfig.resolution': '分辨率',
+  'adConfig.ratio': '长宽比',
+  'adConfig.status': '状态',
+  'adConfig.AD_FILE_TYPE.VIDEO': '视频',
+  'adConfig.AD_FILE_TYPE.IMAGE': '图片',
+  'adConfig.AD_CONF_STATUS.START': '开启',
+  'adConfig.AD_CONF_STATUS.STOP': '关闭',
+  'adConfig.stopConfirmMsg': '确定关闭该售货机广告位?',
+  'adConfig.startConfirmMsg': '确定开启该售货机广告位?',
+};

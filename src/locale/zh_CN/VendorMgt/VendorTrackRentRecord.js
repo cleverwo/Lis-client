@@ -1,0 +1,90 @@
+export default {
+  'vendorTrackRentRecord.vendorTrackRentRecord': '售货机货道租赁',
+  /*第一页*/
+  'vendorTrackRentRecord.vdId': '售货机ID',
+  'vendorTrackRentRecord.vdCode': '售货机名称',
+  'vendorTrackRentRecord.company.name': '生产厂家',
+  'vendorTrackRentRecord.productCode': '厂家编号',
+  'vendorTrackRentRecord.trackNum': '货道数量',
+  'vendorTrackRentRecord.type.description': '售货机类型',
+  'vendorTrackRentRecord.status.description': '售货机状态',
+  'vendorTrackRentRecord.reachTime': '到货时间',
+  'vendorTrackRentRecord.area': '部署区域',
+  'vendorTrackRentRecord.action': '操作',
+  'vendorTrackRentRecord.AisleLease': '货道出租',
+  'vendorTrackRentRecord.please.input.id': '请输入售货机名称',
+  'vendorTrackRentRecord.please.select.type': '请选择售货机类型',
+  'vendorTrackRentRecord.please.select.company': '请选择生产厂家',
+  'vendorTrackRentRecord.please.input.company.name': '请输入公司名称',
+  'vendorTrackRentRecord.please.input.trackNum': '请输入货道数量',
+  'vendorTrackRentRecord.please.input.reachTime': '请输入到货时间',
+  'vendorTrackRentRecord.please.select.status': '请选择售货机状态',
+
+  /*第二页*/
+  'vendorTrackRentRecord.t.modal.title': '售货机货道列表',
+  'vendorTrackRentRecord.t.modal.batchButton': '批量出租',
+  'vendorTrackRentRecord.t.trackId': '货道ID',
+  'vendorTrackRentRecord.t.trackCode': '货道编码',
+  'vendorTrackRentRecord.t.maxCode': '最大装载数量',
+  'vendorTrackRentRecord.t.trackType': '货道类型',
+  'vendorTrackRentRecord.t.trackStatus': '货道状态',
+  'vendorTrackRentRecord.t.description': '描述信息',
+  'vendorTrackRentRecord.t.action': '操作',
+  'vendorTrackRentRecord.t.button': '出租',
+
+  'vendorTrackRentRecord.t.propor': '提成比例',
+  'vendorTrackRentRecord.t.serviceRate': '服务费比例',
+
+  /*第三页*/
+  'vendorTrackRentRecord.s.modal.title': '货道出租',
+  'vendorTrackRentRecord.s.modal.mytitle': '租赁记录',
+  'vendorTrackRentRecord.s.trackCode': '货道编号',
+  'vendorTrackRentRecord.s.businessType': '租赁商户',
+  'vendorTrackRentRecord.s.lessorType': '出租商户',
+  'vendorTrackRentRecord.s.startTime': '租赁开始时间',
+  'vendorTrackRentRecord.s.endTime': '租赁结束时间',
+  'vendorTrackRentRecord.s.type': '租赁类型',
+  'vendorTrackRentRecord.s.status': '租赁状态',
+  'vendorTrackRentRecord.s.renting': '租赁中',
+  'vendorTrackRentRecord.s.rented': '未租赁',
+  'vendorTrackRentRecord.s.propor': '提成比例',
+  'vendorTrackRentRecord.s.action': '操作',
+  'vendorTrackRentRecord.s.button': '新增租赁',
+  'vendorTrackRentRecord.s.rent': '续租',
+  'vendorTrackRentRecord.s.submit': '提交',
+  'vendorTrackRentRecord.s.abolish': '取消',
+  'vendorTrackRentRecord.s.message': '是否要取消出租此货道？',
+
+  /*第四页 批量租赁*/
+  'vendorTrackRentRecord.f.modal.title': '货道批量出租',
+
+  'vendorTrackRentRecord.f.trackCode': '货道编号',
+  'vendorTrackRentRecord.f.businessType': '租赁商户',
+  'vendorTrackRentRecord.f.startTime': '租赁开始时间',
+  'vendorTrackRentRecord.f.endTime': '租赁结束时间',
+  'vendorTrackRentRecord.f.type': '租赁类型',
+  'vendorTrackRentRecord.f.propor': '提成比例',
+  'vendorTrackRentRecord.f.please.input': '请输入',
+  'vendorTrackRentRecord.f.please.select.businessType': '请选择商户类型',
+  'vendorTrackRentRecord.f.please.select.rentType': '请选择租赁类型',
+  'vendorTrackRentRecord.f.message': '是否要取消出租此货道？',
+
+  /*第五页 续租*/
+  'vendorTrackRentRecord.fi.modal.title': '续租',
+
+  /*第六页 我的租赁*/
+  'vendorTrackRentRecord.six.button': '已租赁货道',
+  'vendorTrackRentRecord.six.button2': '租赁详情',
+  'vendorTrackRentRecord.six.button3': '详情',
+  'vendorTrackRentRecord.six.leas': '出租商户',
+  'vendorTrackRentRecord.six.date': '租期',
+  'vendorTrackRentRecord.six.type': '货道类型',
+  'vendorTrackRentRecord.six.details': '货道租赁详细信息',
+
+  /*提示信息*/
+  'vendorTrackRentRecord.businessId.isNull': '租赁商户不能为空',
+  'vendorTrackRentRecord.time.isNull': '时间不能为空',
+  'vendorTrackRentRecord.type.isNull': '租赁类型不能为空',
+  'vendorTrackRentRecord.percentage.isNull': '提成比例不能为空',
+  'vendorTrackRentRecord.serviceRate.isNull': '服务费分摊比例不能为空',
+};

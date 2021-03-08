@@ -1,0 +1,36 @@
+export default {
+  'membershipLevel.membership.level.management.title': '会员等级管理',
+  'membershipLevel.membership.level.create.title': '新建会员等级信息',
+  'membershipLevel.membership.level.update.title': '更新会员等级信息',
+
+  'membershipLevel.membership.level.name': '会员等级名称',
+  'membershipLevel.membership.level.point.min': '最小积分',
+  'membershipLevel.membership.level.point.max': '最大积分',
+  'membershipLevel.membership.level.useStatus': '使用状态',
+  'membershipLevel.membership.level.discount': '折扣',
+  'membershipLevel.membership.level.discount.coupon': '优惠券',
+  'membershipLevel.membership.level.redPacket': '等级享有红包',
+
+  'membershipLevel.search': '查询',
+  'membershipLevel.reset': '重置',
+  'membershipLevel.operation': '操作',
+  'membershipLevel.editor': '编辑',
+  'membershipLevel.match': '查看',
+  'membershipLevel.create': '新建',
+  'membershipLevel.delete': '删除',
+
+  'membershipLevel.input': '请输入',
+  'membershipLevel.select': '请选择',
+  'membershipLevel.addSuccess': '添加成功',
+  'membershipLevel.updateSuccess': '更新成功',
+
+  'membershipLevel.membershipLevelNameNotNULL': '会员等级名称不能为空',
+  'membershipLevel.membershipLevelMinPointNotNULL': '会员等级最小积分不能为空',
+  'membershipLevel.membershipLevelMaxPointNotNULL': '会员等级最大积分不能为空',
+  'membershipLevel.membershipLevelUseStatusNotNULL': '会员等级使用状态不能为空',
+  'membershipLevel.isOpen': '是否开启',
+  'membershipLevel.isClose': '是否停用',
+  'membershipLevel.yes': '开启',
+  'membershipLevel.no': '停用',
+  'membershipLevel.isDelete': '确定要删除吗？',
+};

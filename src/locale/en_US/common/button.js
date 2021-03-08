@@ -1,0 +1,16 @@
+export default {
+  'button.create': 'Create',
+  'button.edit': 'Edit',
+  'button.view': 'View',
+  'button.delete': 'Delete',
+  'button.batchOperation': 'Batch Operation',
+  'button.moreOperations': 'More Operations',
+  'button.search': 'Search',
+  'button.reset': 'Reset',
+  'button.cancel': 'Cancel',
+  'button.expand': 'Expand',
+  'button.collapse': 'Collapse',
+  'button.setting': 'Setting',
+  'button.operations': 'Operations',
+  'button.save': 'Save',
+};

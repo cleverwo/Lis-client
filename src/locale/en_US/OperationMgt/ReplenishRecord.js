@@ -1,0 +1,15 @@
+export default {
+  'replenishRecord.record': 'ReplenishRecord',
+  'replenishRecord.image': 'Replenish Image',
+  'replenishRecord.replenishName': 'Replenish Name',
+  'replenishRecord.time': 'ReplenishTime',
+  'replenishRecord.timeRange': 'ReplenishTime Range',
+  'replenishRecord.goods': 'Replenish Goods',
+  'replenishRecord.goodsSpec': 'GoodsSpec',
+  'replenishRecord.goodsImage': 'GoodsImage',
+  'replenishRecord.originalQuantity': 'OriginalQuantity',
+  'replenishRecord.replenishQuantity': 'ReplenishQuantity',
+  'replenishRecord.today': 'Today',
+  'replenishRecord.week': 'This Week',
+  'replenishRecord.month': 'This Month',
+};

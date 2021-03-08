@@ -1,0 +1,36 @@
+export default {
+  'membershipLevel.membership.level.management.title': 'Membership Level Management',
+  'membershipLevel.membership.level.create.title': 'New membership level information',
+  'membershipLevel.membership.level.update.title': 'Update membership level information',
+
+  'membershipLevel.membership.level.name': 'Membership grade',
+  'membershipLevel.membership.level.point.min': 'Minimum membership grade points',
+  'membershipLevel.membership.level.point.max': 'Maximum membership grade points',
+  'membershipLevel.membership.level.useStatus': 'Usage state',
+  'membershipLevel.membership.level.discount': 'Discount',
+  'membershipLevel.membership.level.discount.coupon': 'Discount Coupon',
+  'membershipLevel.membership.level.redPacket': 'Class bonus',
+
+  'membershipLevel.search': 'SEARCH',
+  'membershipLevel.reset': 'RESET',
+  'membershipLevel.operation': 'OPERATION',
+  'membershipLevel.editor': 'EDIT',
+  'membershipLevel.match': 'MATCH',
+  'membershipLevel.create': 'CREATE',
+  'membershipLevel.delete': 'DELETE',
+
+  'membershipLevel.input': 'INPUT',
+  'membershipLevel.select': 'SELECT',
+  'membershipLevel.addSuccess': 'Add Success',
+  'membershipLevel.updateSuccess': 'Update Success',
+
+  'membershipLevel.membershipLevelNameNotNULL': 'The membership class name cannot be empty',
+  'membershipLevel.membershipLevelMinPointNotNULL': 'Minimum membership points cannot be empty',
+  'membershipLevel.membershipLevelMaxPointNotNULL': 'Maximum membership points cannot be empty',
+  'membershipLevel.membershipLevelUseStatusNotNULL': 'Membership level cannot be empty ',
+  'membershipLevel.isOpen': 'Whether open',
+  'membershipLevel.isClose': 'Whether discontinuation',
+  'membershipLevel.yes': 'START',
+  'membershipLevel.no': 'STOP',
+  'membershipLevel.isDelete': 'Are you sure you want to delete it?',
+};

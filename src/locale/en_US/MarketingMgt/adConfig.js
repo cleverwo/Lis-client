@@ -1,0 +1,16 @@
+export default {
+  'adConfig.create': 'Create',
+  'adConfig.update': 'Update',
+  'adConfig.location': 'Location',
+  'adConfig.vdType': 'Type of advertising display',
+  'adConfig.adType': 'AD Type',
+  'adConfig.resolution': 'Resolution',
+  'adConfig.ratio': 'Ratio',
+  'adConfig.status': 'Status',
+  'adConfig.AD_FILE_TYPE.VIDEO': 'Video',
+  'adConfig.AD_FILE_TYPE.IMAGE': 'Image',
+  'adConfig.AD_CONF_STATUS.START': 'Start',
+  'adConfig.AD_CONF_STATUS.STOP': 'Stop',
+  'adConfig.stopConfirmMsg': 'Sure to stop the ad location?',
+  'adConfig.startConfirmMsg': 'Sure to start the ad location?',
+};
