@@ -11,6 +11,7 @@ export default {
   },
   alias: {
     components: path.resolve(__dirname, 'src/components/'),
+    '@': path.resolve('src'),
   },
   ignoreMomentLocale: true,
   theme: './src/theme.js',

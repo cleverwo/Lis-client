@@ -2,119 +2,86 @@ import { isUrl } from '../utils/utils';
 
 const menuData = [
   {
-    name: '用户开户',
-    icon: 'user',
-    path: 'customer/register',
+    name: '首页',
+    icon: 'home',
+    path: 'welcome',
   },
+  /*样本管理 */
   {
-    name: '用户缴费',
-    icon: 'user',
-    path: 'customer/topUp',
-  },
-  /*水表管理*/
-  {
-    name: '水表管理',
+    name: '样本管理',
     icon: 'book',
-    path: 'meter',
+    path: 'sample',
     children: [
       {
-        name: '水表列表',
+        name: '样本采集',
         icon: 'book',
-        path: 'meters',
+        path: 'collect',
       },
       {
-        name: '用户列表',
+        name: '样本核收',
         icon: 'bulb',
-        path: 'customerList',
+        path: 'accept',
+      },
+      {
+        name: '样本留存',
+        icon: 'bulb',
+        path: 'receive',
       },
     ],
   },
-  /*区域管理*/
+  /*样本检测*/
   {
-    name: '区域管理',
-    icon: 'book',
-    path: 'areas',
-    children: [
-      {
-        name: '区域列表',
-        icon: 'book',
-        path: 'community',
-      },
-    ],
+    name: '样本检测',
+    icon: 'filter',
+    path: 'task',
   },
-  /*记录管理*/
+  /*检测报告管理*/
   {
-    name: '记录管理',
-    icon: 'money-collect',
-    path: 'charge',
-    children: [
-      {
-        name: '用水记录',
-        icon: 'line-chart',
-        path: 'waterUsedRecord',
-        authority: ['am_waterRecord_view'],
-      },
-      {
-        name: '收费记录',
-        icon: 'line-chart',
-        path: 'payRecord/offline',
-      },
-      {
-        name: '收费统计',
-        icon: 'line-chart',
-        path: 'statistics',
-      },
-      {
-        name: '水表更换记录',
-        icon: 'book',
-        path: 'changeRecord',
-      },
-    ],
+    name: '检测报告管理',
+    icon: 'copy',
+    path: 'report',
   },
-  /*水价管理*/
+  /*仪器终端管理*/
   {
-    name: '水价管理',
-    icon: 'rise',
-    path: 'waterPrice/waterPrice',
+    name: '仪器终端管理',
+    icon: 'hdd',
+    path: 'instrument',
   },
-  /*通知管理*/
+  /*质控管理*/
   {
-    name: '报警管理',
-    icon: 'alert',
-    path: 'notice/notice/dataAlarm',
+    name: '质控管理',
+    icon: 'bar-chart',
+    path: 'qc',
   },
-  /*公司管理*/
+  /*危急值管理*/
   {
-    name: '公司管理',
-    icon: 'layout',
-    path: 'company',
+    name: '危急值管理',
+    icon: 'heart',
+    path: 'critical ',
+  },
+  /*试剂管理*/
+  {
+    name: '试剂管理',
+    icon: 'medicine-box',
+    path: 'reagent ',
+  },
+  /*TAT管理*/
+  {
+    name: 'TAT管理',
+    icon: 'coffee',
+    path: 'time ',
+  },
+  /*权限管理*/
+  {
+    name: '权限管理',
+    icon: 'key',
+    path: 'power',
     children: [
       {
         name: '人员管理',
-        icon: 'bulb',
-        path: 'admin',
-        authority: ['am_companyMember_view'],
+        icon: 'setting',
+        path: 'role',
       },
-      {
-        name: '子公司管理',
-        icon: 'bulb',
-        path: 'branchCompany',
-        authority: ['am_companyChildren_view'],
-      },
-      {
-        name: '营业厅管理',
-        icon: 'bulb',
-        path: 'businessHall',
-        authority: ['am_companyHall_view'],
-      },
-    ],
-  },
-  /*权限设置*/
-  {
-    name: '权限设置',
-    icon: 'setting',
-    path: 'power',
-    children: [
       {
         name: '角色管理',
         icon: 'setting',
@@ -130,7 +97,7 @@ const menuData = [
   /*系统设置*/
   {
     name: '系统设置',
-    icon: 'tool',
+    icon: 'setting',
     path: 'system',
     children: [
       {
@@ -164,6 +131,7 @@ const menuData = [
     name: '账户',
     icon: 'user',
     path: 'user',
+    authority: 'guest',
     children: [
       {
         name: '登录',

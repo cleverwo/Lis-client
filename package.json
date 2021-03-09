@@ -19,6 +19,7 @@
     "pro": "node --max_old_space_size=4096 build/build.js "
   },
   "dependencies": {
+    "@ant-design/icons": "^4.5.0",
     "@antv/data-set": "^0.8.0",
     "@babel/core": "7.0.0-beta.46",
     "@babel/polyfill": "7.0.0-beta.46",

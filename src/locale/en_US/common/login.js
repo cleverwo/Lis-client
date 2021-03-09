@@ -6,7 +6,7 @@ export default {
   'login.privacy': 'privacy',
   'login.terms': 'terms',
 
-  'login.title': 'WaterMeter IoT Admin',
+  'login.title': 'LIS Admin',
   'login.purpose': 'credibility and integrity | sincerely service',
 
   'login.way.username': 'LoginByUsername',

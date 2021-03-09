@@ -156,31 +156,31 @@ export default class LoginPage extends Component {
             <UserName name="username" placeholder={intl.formatMessage({ id: 'login.username' })} />
             <Password name="password" placeholder={intl.formatMessage({ id: 'login.pwd' })} />
           </Tab>
-          {/*<Tab key="mobile" tab={intl.formatMessage({ id: 'login.way.mobile' })}>*/}
-            {/*{login.status === 'error' &&*/}
-              {/*login.type === 'mobile' &&*/}
-              {/*!login.submitting &&*/}
-              {/*this.renderMessage(intl.formatMessage({ id: 'login.error.captcha' }))}*/}
-            {/*<Mobile name="mobile" onChange={this.handleChange} />*/}
-            {/*<Captcha name="captcha" onGetCaptcha={this.onGetCaptcha} />*/}
-          {/*</Tab>*/}
+          <Tab key="mobile" tab={intl.formatMessage({ id: 'login.way.mobile' })}>
+            {login.status === 'error' &&
+              login.type === 'mobile' &&
+              !login.submitting &&
+              this.renderMessage(intl.formatMessage({ id: 'login.error.captcha' }))}
+            <Mobile name="mobile" onChange={this.handleChange} />
+            <Captcha name="captcha" onGetCaptcha={this.onGetCaptcha} />
+          </Tab>
           <div>
             <Checkbox checked={this.state.autoLogin} onChange={this.changeAutoLogin}>
               {intl.formatMessage({ id: 'login.autoLogin' })}
             </Checkbox>
-            {/*<Switch*/}
-              {/*checkedChildren={curLocale}*/}
-              {/*unCheckedChildren={otherLocale}*/}
-              {/*defaultChecked*/}
-              {/*onChange={this.localeOnChange}*/}
-            {/*/>*/}
-            {/*<Link style={{ float: 'right' }} to="/user/forgotPassword">*/}
-              {/*{intl.formatMessage({ id: 'login.forgetPwd' })}*/}
-            {/*</Link>*/}
+            <Switch
+              checkedChildren={curLocale}
+              unCheckedChildren={otherLocale}
+              defaultChecked
+              onChange={this.localeOnChange}
+            />
+            <Link style={{ float: 'right' }} to="/user/forgotPassword">
+              {intl.formatMessage({ id: 'login.forgetPwd' })}
+            </Link>
           </div>
           <Submit loading={submitting}>{intl.formatMessage({ id: 'login.login' })}</Submit>
           {/* 屏蔽掉注册以及第三方登录 */}
-          {/* <div className={styles.other}>
+          <div className={styles.other}>
             {intl.formatMessage({ id: 'login.way.other' })}
             <Icon className={styles.icon} type="alipay-circle" />
             <Icon className={styles.icon} type="taobao-circle" />
@@ -188,7 +188,7 @@ export default class LoginPage extends Component {
             <Link className={styles.register} to="/user/register">
               {intl.formatMessage({ id: 'login.register' })}
             </Link>
-          </div> */}
+          </div>
         </Login>
       </div>
     );

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'dva/router';
-import PageHeader from '../components/PageHeader';
+import PageHeader from '@/components/PageHeader';
 import styles from './PageHeaderLayout.less';
+import classNames from 'classnames';
 
-export default ({ children, wrapperClassName, top, ...restProps }) => (
+export default ({ noMargin,children, wrapperClassName, top, ...restProps }) => (
   <div style={{ margin: '-24px -24px 0' }} className={wrapperClassName}>
     {top}
-    <PageHeader key="pageheader" {...restProps} linkElement={Link} />
-    {children ? <div className={styles.content}>{children}</div> : null}
+    <PageHeader key="pageheader" {...restProps} linkElement={Link}  />
+    {children ? <div className={classNames(noMargin?`${styles.none}`:`${styles.content}`)}>{children}</div> : null}
   </div>
 );

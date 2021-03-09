@@ -1,5 +1,3 @@
-import { queryUnReadNotice } from '../services/personcenter/notice';
-
 export default {
   namespace: 'global',
 

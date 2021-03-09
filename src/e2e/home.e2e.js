@@ -7,7 +7,7 @@ describe('Homepage', () => {
     await page.goto('http://localhost:8000');
     await page.waitForSelector('h1');
     const text = await page.evaluate(() => document.body.innerHTML);
-    expect(text).toContain('<h1>WaterMeterIoT</h1>');
+    expect(text).toContain('<h1>LIS实验室信息系统</h1>');
     await page.close();
     browser.close();
   });

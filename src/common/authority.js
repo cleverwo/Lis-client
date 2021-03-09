@@ -12,7 +12,7 @@ function doCheck(response) {
   const error = new Error('鉴权失败');
   error.name = response.status;
   error.response = response;
-  //console.log('鉴权失败')
+  console.log('鉴权失败')
   throw error;
 }
 

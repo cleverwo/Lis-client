@@ -82,7 +82,8 @@ class Login extends Component {
         return;
       }
       // eslint-disable-next-line
-      if (item.type.__ANT_PRO_LOGIN_TAB) {
+      const status = item.type.__ANT_PRO_LOGIN_TAB!==undefined?item.type.__ANT_PRO_LOGIN_TAB:false;
+      if (status) {
         TabChildren.push(item);
       } else {
         otherChildren.push(item);

@@ -156,7 +156,7 @@ class BasicLayout extends React.PureComponent {
   getPageTitle() {
     const { routerData, location } = this.props;
     const { pathname } = location;
-    let title = '实验室信息管理系统';
+    let title = 'LIS系统';
     let currRouterData = null;
     // match params path
     Object.keys(routerData).forEach(key => {
@@ -165,7 +165,7 @@ class BasicLayout extends React.PureComponent {
       }
     });
     if (currRouterData && currRouterData.name) {
-      title = `${currRouterData.name} - 实验室信息管理系统`;
+      title = `${currRouterData.name} - LIS系统`;
     }
     return title;
   }

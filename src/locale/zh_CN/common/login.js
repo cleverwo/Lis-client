@@ -6,7 +6,7 @@ export default {
   'login.privacy': '隐私',
   'login.terms': '条款',
 
-  'login.title': '实验室信息管理系统',
+  'login.title': 'LIS系统',
   'login.purpose': '诚信经营 | 用心服务',
 
   'login.way.username': '账号密码登录',
