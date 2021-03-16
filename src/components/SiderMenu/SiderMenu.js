@@ -4,8 +4,6 @@ import pathToRegexp from 'path-to-regexp';
 import { Link } from 'dva/router';
 import styles from './index.less';
 import { urlToList } from '../_utils/pathTools';
-import { getAuthority } from '../../utils/authority';
-import { mainPage } from '../../common/config';
 import { injectIntl } from 'react-intl';
 
 const { Sider } = Layout;
@@ -221,7 +219,7 @@ export default class SiderMenu extends PureComponent {
         className={styles.sider}
       >
         <div className={styles.logo} key="logo">
-          <Link to={mainPage}>
+          <Link to={'/welcome'}>
             <img src={logo} alt="logo" />
             <h1>{intl.formatMessage({ id: 'global.header.title.short' })}</h1>
           </Link>

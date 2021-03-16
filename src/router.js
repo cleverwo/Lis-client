@@ -8,7 +8,6 @@ import styles from './index.less';
 import { checkLogin } from './common/authority';
 import { IntlProvider } from 'react-intl';
 import { messages, antMessages } from './locale/index';
-import { locale } from './common/config';
 import { getLocale } from './locale/locale';
 
 const { AuthorizedRoute } = Authorized(null);

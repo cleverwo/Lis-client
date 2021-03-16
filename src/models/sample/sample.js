@@ -11,10 +11,10 @@ export default {
     modalVisible: false,
     selectedRows: [],
     expandSearchForm: false,
+    addModalVisible: false,
 
     viewModalVisible: false,
     requestModalVisible: false,
-    addModalVisible: false,
     uploadModalVisible: false,
     setTimeModalVisible: false,
     notSetTimeModalVisible: false,
@@ -61,6 +61,12 @@ export default {
         selectedRows: action.payload,
       };
     },
-
+    //保存选中行信息
+    setAddModalVisible(state, action) {
+      return {
+        ...state,
+        addModalVisible: action.payload,
+      };
+    },
   },
 };

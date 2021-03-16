@@ -103,7 +103,7 @@ class StandardTable extends PureComponent {
     console.log("sss",paginationProps);
     return (
       <div className={styles.standardTable}>
-        <div className={styles.tableAlert} style={divStyle}>
+        <div style={divStyle}>
           {selectedRowKeys.length !==0 ? (
             <Alert
               message={
@@ -128,6 +128,7 @@ class StandardTable extends PureComponent {
           ) : ' '}
         </div>
         <Table
+          className={styles['override-ant-table-body']}
           loading={loading}
           rowKey={rowKey || 'key'}
           {...rowSelectionProp}

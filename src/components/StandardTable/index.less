@@ -7,11 +7,16 @@
     }
   }
 
-  .tableAlert {
-    margin-bottom: 16px;
-  }
-
   .showTotal {
     font-size: 15px;
+  }
+}
+
+.override-ant-table-body{
+  :global(.ant-table-body){
+    min-height: 600px !important;
+  }
+  :global(.ant-table){
+      border: 1px solid #ccc;
   }
 }

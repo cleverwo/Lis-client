@@ -9,7 +9,7 @@ import {
   Select,
   Divider,
   Icon,
-  DatePicker, Table,
+  DatePicker, Table,Radio
 } from 'antd';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import StandardTable from '@/components/StandardTable';
@@ -29,7 +29,7 @@ const getValue = obj =>
   sample,
 }))
 @Form.create()
-export default class Accept extends Component {
+export default class Task extends Component {
 
   //显示搜索框
   renderForm() {
@@ -45,7 +45,27 @@ export default class Accept extends Component {
       <Form onSubmit={this.handleSearch} layout="inline">
         <Row gutter={{ md: 6, lg: 24, xl: 48 }}>
           <Col md={8} sm={24}>
-            <FormItem label="采集时间">
+            <FormItem label="仪器">
+              {getFieldDecorator('sampleState')(
+                <Select placeholder="请选择" style={{ width: '100%' }} defaultValue='血液分析仪(Sysmex_XN2800)'>
+                  <Select.Option key="WEIXIN" value="WEIXIN">
+                    血液分析仪(Sysmex_XN2800)
+                  </Select.Option>
+                  <Select.Option key="ZHIFUBAO" value="ZHIFUBAO">
+                    待检验
+                  </Select.Option>
+                  <Select.Option key="CASH" value="CASH">
+                    已检验
+                  </Select.Option>
+                  <Select.Option key="BANK_CARD" value="BANK_CARD">
+                    拒签
+                  </Select.Option>
+                </Select>,
+              )}
+            </FormItem>
+          </Col>
+          <Col md={8} sm={24}>
+            <FormItem label="核收时间">
               {getFieldDecorator('createTime')(
                 <RangePicker
                   ranges={{
@@ -72,22 +92,9 @@ export default class Accept extends Component {
             </FormItem>
           </Col>
           <Col md={8} sm={24}>
-            <FormItem label="标本状态">
+            <FormItem label="姓名">
               {getFieldDecorator('sampleState')(
-                <Select placeholder="请选择" style={{ width: '100%' }}>
-                  <Select.Option key="WEIXIN" value="WEIXIN">
-                    待核收
-                  </Select.Option>
-                  <Select.Option key="ZHIFUBAO" value="ZHIFUBAO">
-                    待检验
-                  </Select.Option>
-                  <Select.Option key="CASH" value="CASH">
-                    已检验
-                  </Select.Option>
-                  <Select.Option key="BANK_CARD" value="BANK_CARD">
-                    拒签
-                  </Select.Option>
-                </Select>,
+                <Input/>
               )}
             </FormItem>
           </Col>
@@ -130,8 +137,28 @@ export default class Accept extends Component {
     return (
       <Form onSubmit={this.handleSearch} layout="inline">
         <Row gutter={{ md: 6, lg: 24, xl: 48 }}>
-          <Col md={8} sm={24}>
-            <FormItem label="采集时间">
+          <Col md={6} sm={24}>
+            <FormItem label="仪器">
+              {getFieldDecorator('sampleState')(
+                <Select placeholder="请选择" style={{ width: '100%' }} defaultValue='血液分析仪(Sysmex_XN2800)'>
+                  <Select.Option key="WEIXIN" value="WEIXIN">
+                    血液分析仪(Sysmex_XN2800)
+                  </Select.Option>
+                  <Select.Option key="ZHIFUBAO" value="ZHIFUBAO">
+                    待检验
+                  </Select.Option>
+                  <Select.Option key="CASH" value="CASH">
+                    已检验
+                  </Select.Option>
+                  <Select.Option key="BANK_CARD" value="BANK_CARD">
+                    拒签
+                  </Select.Option>
+                </Select>,
+              )}
+            </FormItem>
+          </Col>
+          <Col md={6} sm={24}>
+            <FormItem label="核收时间">
               {getFieldDecorator('createTime')(
                 <RangePicker
                   ranges={{
@@ -157,27 +184,14 @@ export default class Accept extends Component {
               )}
             </FormItem>
           </Col>
-          <Col md={8} sm={24}>
-            <FormItem label="标本状态">
+          <Col md={6} sm={24}>
+            <FormItem label="姓名">
               {getFieldDecorator('sampleState')(
-                <Select placeholder="请选择" style={{ width: '100%' }}>
-                  <Select.Option key="WEIXIN" value="WEIXIN">
-                    待核收
-                  </Select.Option>
-                  <Select.Option key="ZHIFUBAO" value="ZHIFUBAO">
-                    待检验
-                  </Select.Option>
-                  <Select.Option key="CASH" value="CASH">
-                    已检验
-                  </Select.Option>
-                  <Select.Option key="BANK_CARD" value="BANK_CARD">
-                    拒签
-                  </Select.Option>
-                </Select>,
+                <Input/>
               )}
             </FormItem>
           </Col>
-          <Col md={8} sm={24}>
+          <Col md={6} sm={24}>
               <span style={{ float: 'left', marginBottom: 24 }}>
                 <Button type="primary" htmlType="submit">
                   刷新列表
@@ -199,6 +213,12 @@ export default class Accept extends Component {
       type: 'sample/setExpandSearchForm',
       payload: data,
     });
+  };
+
+  //单选框选择事件
+  onChange = e => {
+    console.log('radio checked', e.target.value);
+
   };
 
   render() {
@@ -229,15 +249,21 @@ export default class Accept extends Component {
       pagination: {
         pageNum: 1,
         pageSize: 10,
-        total: 20,
+        total: 6471,
       },
     };
     const columns = [
       {
+        title: '实验号',
+        dataIndex: 'instrumentIndex',
+        key: 'instrumentIndex',
+        width: 70
+      },
+      {
         title: '姓名',
         dataIndex: 'name',
         key: 'deviceId',
-        width: 60,
+        width: 70,
       },
       {
         title: '性别',
@@ -252,9 +278,21 @@ export default class Accept extends Component {
         width: 60,
       },
       {
-        title: '标本类型',
+        title: '病人类型',
+        dataIndex: 'patientType',
+        key: 'patientType',
+        width: 100,
+      },
+      {
+        title: '标本状态',
         dataIndex: 'sampleType',
-        key: 'updateTime',
+        key: 'sampleType',
+        width: 100,
+      },
+      {
+        title: '标本类型',
+        dataIndex: 'sampleStatus',
+        key: 'sampleStatus',
         width: 100,
       },
       {
@@ -287,12 +325,7 @@ export default class Accept extends Component {
         key: 'collectOperator',
         width: 80,
       },
-      {
-        title: '病人类型',
-        dataIndex: 'patientType',
-        key: 'patientType',
-        width: 100,
-      },
+
       {
         title: '处方科室',
         dataIndex: 'doctorDepartment',
@@ -374,11 +407,17 @@ export default class Accept extends Component {
     ];
 
     return (
-      <PageHeaderLayout title="样品核收" noMargin>
+      <PageHeaderLayout title="样本检测" noMargin>
         <Card bordered={false} style={{ paddingBottom: 0 }} size='small'>
           <div className={styles.tableList}>
             <div className={styles.tableListForm}>{this.renderForm()}</div>
             <Divider className={styles['override-ant-divider-horizontal']}/>
+            <Radio.Group onChange={this.onChange} value={1}>
+              <Radio value={1}>全部样本:6471</Radio>
+              <Radio value={2}>待审核:68</Radio>
+              <Radio value={3}>审核:128</Radio>
+              <Radio value={4}>打印:6275</Radio>
+            </Radio.Group>
             <Row gutter={16}>
               <Col span={15}>
                 <StandardTable

@@ -73,7 +73,7 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, ['user', 'login'], () => import('../layouts/BasicLayout')),
     },
     '/welcome': {
-      component: dynamicWrapper(app, [], () => import('../routes/welcome')),
+      component: dynamicWrapper(app, ['print','print'], () => import('../routes/welcome')),
     },
     /* --------------------------------------------------- 样本管理 ----------------------------------*/
     '/sample/collect': {
@@ -91,6 +91,13 @@ export const getRouterData = app => {
         import('../routes/sampleMGT/receive')
       ),
     },
+    /* --------------------------------------------------- 样本检测 ----------------------------------*/
+    '/task': {
+      component: dynamicWrapper(app, [], () =>
+        import('../routes/taskMGT/task')
+      ),
+    },
+
     /* --------------------------------------------------- 权限设置 ----------------------------------*/
 
     /* --------------------------------------------------- 系统设置 ----------------------------------*/
